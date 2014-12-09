@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.css">
+        <style>
+            figure svg {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+        <title>M2 Travel times</title>
+        <script src="//d3js.org/d3.v3.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.js"></script>
+        <script src="js/stacked-chart.js"></script>
+    </head>
+    <body>
+        <figure id="chart0">
+            <h2>M2 East</h2>
+            <svg></svg>
+        </figure>
+
+        <figure id="chart1">
+            <h2>M2 West</h2>
+            <svg></svg>
+        </figure>
+
+        <script>
+            stackedChart('m2csveast.php', '#chart0 svg', 'Time');
+            stackedChart('m2csvwest.php', '#chart1 svg', 'Time');
+        </script>
+    </body>
+</html>

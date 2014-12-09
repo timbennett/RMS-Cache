@@ -9,7 +9,7 @@ $json = file_get_contents($jsonurl,0,null,null);
 $responseData = json_decode($json, TRUE);
 
 // database connection
-$con = mysqli_connect("localhost","","","");
+$con = mysqli_connect("localhost","","","rms-cache");
 // Check connection
 if (mysqli_connect_errno()) {
     echo 'Failed to connect to MySQL: ' . mysqli_connect_error();
@@ -34,7 +34,7 @@ print_r($times);
 
 		$result = mysqli_query( $con, 
 			"
-			INSERT INTO rms_m2_times (
+			INSERT INTO m2_times (
 			timestamp,
 			E1,
 			E2,

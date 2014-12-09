@@ -1,6 +1,8 @@
 <?php
 /* Render latest traffic data as CSV (Eastbound M2 route) */
 // TODO: Write to a static file so people aren't calling this script all the time.
+// TODO: Move database details out of this file
+// TODO: Generalise to render CSV for M1/M2/M4/M7 (probably a total rewrite)
 
 echo "Time,M7 > Windsor Rd,Windsor Rd > Pennant Hills Rd,Pennant Hills Rd > Christie Rd,Christie Rd > Lane Cove Rd,Lane Cove Rd > Delhi Rd,Delhi Rd > Lane Cove Tunnel\n";
 

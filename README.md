@@ -9,5 +9,11 @@ Pull requests happily entertained as the initial commits are about as far as I c
 
 Eventual goal is to release this data as a training set for machine learning if appropriate.
 
+##Instructions
+
+1. Create the database (rms-cache.sql)
+2. Call scrapeM2.php whenever you want to update (I use a per-minute cron as data is sometimes updated at sub-minute level)
+3. Produce east/westbound CSV with the respective csv.php file.
+
 contact: flashman@gmail.com / [@flashman](http://www.twitter.com/flashman)
 

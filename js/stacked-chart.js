@@ -40,7 +40,7 @@ function csv2nvd3(data, x) {
 		return {
 			key: key,
 			values: data.map(function(datum) {
-				return [new Date(datum[x].replace(' ', 'T')), parseFloat(datum[key])];
+				return [moment(datum[x]).toDate(), parseFloat(datum[key])];
 			}),
 		};
 	});

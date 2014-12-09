@@ -14,10 +14,10 @@ function convert($result){
 }
 
 // database connection
-$con = mysqli_connect("localhost","","","");
+$con = mysqli_connect("localhost","","","rms-cache");
 $query= "
 		SELECT `timestamp`, `ETOTAL`, `E1`, `E2`, `E3`, `E4`, `E5`, `E6`
-		FROM (SELECT `timestamp`, `ETOTAL`, `E1`, `E2`, `E3`, `E4`, `E5`, `E6` FROM `rms_m2_times` ORDER BY `timestamp` desc LIMIT 180) tmp
+		FROM (SELECT `timestamp`, `ETOTAL`, `E1`, `E2`, `E3`, `E4`, `E5`, `E6` FROM `m2_times` ORDER BY `timestamp` desc LIMIT 180) tmp
 		ORDER BY `timestamp` ASC
 		";
 $result = mysqli_query($con, $query);
